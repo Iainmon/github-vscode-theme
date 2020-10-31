@@ -1,7 +1,7 @@
 {
-	"name": "github-vscode-theme",
-	"displayName": "GitHub Theme",
-	"description": "GitHub theme for VS Code",
+	"name": "iains-github-vscode-theme",
+	"displayName": "Iain's GitHub Theme",
+	"description": "Iain's GitHub theme for VS Code",
 	"version": "1.1.5",
 	"preview": true,
 	"publisher": "GitHub",
@@ -13,10 +13,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/primer/github-vscode-theme"
+		"url": "https://github.com/iainmon/github-vscode-theme"
 	},
 	"bugs": {
-		"url": "https://github.com/primer/github-vscode-theme/issues"
+		"url": "https://github.com/iainmon/github-vscode-theme/issues"
 	},
 	"engines": {
 		"vscode": "^1.43.0"
