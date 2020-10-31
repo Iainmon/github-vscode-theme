@@ -10,12 +10,19 @@ function getTheme({ style, name }) {
 
   const primer = getColors(style);
 
-  const workbenchForeground = pick({ light: primer.gray[8], dark: primer.gray[7] });
-  const editorForeground = pick({ light: primer.gray[9], dark: primer.gray[7] });
-  primer.red[6] = "#EA4A5A";
-  primer.gray[0] = "#242528";
+
+  const sharkBlack = "#242528";
   const bunkerBlack = "#17181A";
   const tropicalBlue = "#C8E1FF";
+  const alabasterWhite = "#FBFBFC";
+  const mercuryWhite = primer.gray[7];
+  const mandyRed = "#EA4A5A";
+  primer.red[6] = mandyRed;
+  primer.gray[0] = sharkBlack;
+
+  const workbenchForeground = pick({ light: primer.gray[8], dark: primer.gray[7] });
+  const editorForeground = pick({ light: primer.gray[9], dark: mercuryWhite/*primer.gray[7]*/ });
+
   return {
     name: name,
     colors: {
@@ -55,14 +62,14 @@ function getTheme({ style, name }) {
       "progressBar.background": primer.blue[4],
 
       "titleBar.activeForeground": workbenchForeground,
-      "titleBar.activeBackground": pick({ light: primer.white, dark: primer.gray[0] }),
+      "titleBar.activeBackground": pick({ light: primer.white, dark: bunkerBlack /*primer.gray[0]*/ }),
       "titleBar.inactiveForeground": primer.gray[5],
       "titleBar.inactiveBackground": pick({ light: primer.gray[1], dark: bunkerBlack }),
       "titleBar.border": pick({ light: primer.gray[2], dark: primer.white }),
 
       "activityBar.foreground": workbenchForeground,
       "activityBar.inactiveForeground": primer.gray[4],
-      "activityBar.background": pick({ light: primer.white, dark: primer.gray[0] }),
+      "activityBar.background": pick({ light: primer.white, dark: bunkerBlack /*primer.gray[0]*/ }),
       "activityBarBadge.foreground": pick({ light: primer.white, dark: primer.black }),
       "activityBarBadge.background": pick({ light: primer.blue[4], dark: primer.blue[4] }),
       "activityBar.activeBorder": "#f9826c",
